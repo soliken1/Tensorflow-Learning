@@ -20,6 +20,7 @@ X = np.array(data.drop([predict], axis=1))
 y = np.array(data[predict])
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size=0.1)
 
+""" Training For Better Generational Output """
 """
 best = 0
 for _ in range(30):
@@ -36,6 +37,8 @@ for _ in range(30):
         with open("studentmodel.pickle", "wb") as f:
             pickle.dump(linear, f)
 """
+
+""" Loads best generational output """
 pickle_in = open("studentmodel.pickle", "rb")
 linear = pickle.load(pickle_in)
 
